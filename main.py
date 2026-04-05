@@ -4,6 +4,13 @@ Domain: Financial Research & Investment Analysis
 Author: BITS WILP Assignment
 """
 
+import sys
+import os
+
+# Ensure the project root is on the Python path regardless of how the script
+# is invoked (python main.py, uvicorn main:app, etc.)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import time
 import uvicorn
 from fastapi import FastAPI
